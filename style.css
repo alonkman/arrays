@@ -1,0 +1,36 @@
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 211, 211);
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(216, 211, 211);
+  }
+
+  /* Style the buttons */
+  button {
+    background-color: #577e58;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Style the buttons on hover */
+  button:hover {
+    background-color: #1f5121;
+  }
+  /* style the background */
+
+  body {
+      background-color: #63a966
+  }

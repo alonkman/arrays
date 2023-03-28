@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <input id="string" placeholder="question 1" />
-    <button onclick="letters_3()">Click here</button>
-    <input id="string" placeholder="question 2" />
-    <button onclick="letters_sum()">Click here_2</button>
-    <input id="string" placeholder="question 3" />
-    <button onclick="word()">Click here_3</button>
-    <input id="string" placeholder="question 4" />
-    <button onclick="Number_sum()">Click here_4</button>
-    <input id="string" placeholder="question 5,6" />
-    <button onclick="averge()">Click here_5</button>
-    <script>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+  
+</head>
+<body>
+  <input id="string" placeholder="question 1">
+  <button onclick="letters_3()">Click here</button>
+  <br>
+
+  <input id="string" placeholder="question 2">
+  <button onclick="letters_sum()">Click here_2</button> 
+  <br>
+
+  <input id="string" placeholder="question 3">
+  <button onclick="word()">Click here_3</button>
+    <br>
+
+  <input id="string" placeholder="question 4">
+  <button onclick="Number_sum()">Click here_4</button>
+    <br>
+
+  <input id="string" placeholder="question 5,6">
+  <button onclick="averge()">Click here_5</button>
+  <br>
+
+  <script>
      
-      let animals = [
-        "dog",
+    let animals = [
+      "dog",
+      "cat",
+      "zebra",
+      "lion",
+      "crocodile",
+      "giaffe",
+      "elephant",
+      "monkey",
+      "snake",
+      "mouse",
+      "zebra",
+    ];
+    function letters_3() {
+      for (let index = 0; index < animals.length; index++) {
+        if (animals[index].length > 3) {
+          console.log(animals[index]);
+        }
+      }
+    }
+    function letters_sum() {
+      sum = 0;
+      for (let index = 0; index < animals.length; index++) {
+        sum += animals[index].length;
+      }
+      console.log(sum);
+    }
+    function word() {
+      count = 0;
+
+      for (let index = 0; index < animals.length; index++) {
+        if (animals[index] == "zebra") {
+          count += 1;
+        }
+      }
+      console.log(`the word zebra appeard ${count} times`);
+    }
+    function Number_sum() {
+      sum = 0;
+      let animals_num = [
+        1,
         "cat",
-        "zebra",
+        9,
         "lion",
         "crocodile",
-        "giaffe",
+        7,
         "elephant",
         "monkey",
-        "snake",
+        3,
         "mouse",
         "zebra",
       ];
-      function letters_3() {
-        for (let index = 0; index < animals.length; index++) {
-          if (animals[index].length > 3) {
-            console.log(animals[index]);
-          }
+
+      for (let index = 0; index < animals_num.length; index++) {
+        if (typeof animals_num[index] === "number") {
+          sum += animals_num[index];
         }
       }
-      function letters_sum() {
-        sum = 0;
-        for (let index = 0; index < animals.length; index++) {
-          sum += animals[index].length;
-        }
-        console.log(sum);
+      console.log(sum);
+    }
+    function averge() {
+      let numbers = [2, 8, 32, 76, 54, 60, 4, 17, 3, 1];
+      avg = 0;
+      for (let index = 0; index < numbers.length; index++) {
+        avg += numbers[index] / numbers.length;
       }
-      function word() {
-        count = 0;
-
-        for (let index = 0; index < animals.length; index++) {
-          if (animals[index] == "zebra") {
-            count += 1;
-          }
-        }
-        console.log(`the word zebra appeard ${count} times`);
-      }
-      function Number_sum() {
-        sum = 0;
-        let animals_num = [
-          1,
-          "cat",
-          9,
-          "lion",
-          "crocodile",
-          7,
-          "elephant",
-          "monkey",
-          3,
-          "mouse",
-          "zebra",
-        ];
-
-        for (let index = 0; index < animals_num.length; index++) {
-          if (typeof animals_num[index] === "number") {
-            sum += animals_num[index];
-          }
-        }
-        console.log(sum);
-      }
-      function averge() {
-        let numbers = [2, 8, 32, 76, 54, 60, 4, 17, 3, 1];
-        avg = 0;
-        for (let index = 0; index < numbers.length; index++) {
-          avg += numbers[index] / numbers.length;
-        }
-        console.log(avg);
-        let min_number = Number.MAX_VALUE
-        let max_number = 0
-        for (let index = 0; index < numbers.length; index++) {
-            if (min_number > numbers[index]) {
-                min_number = numbers[index];   
-        }
-        
-      }console.log('the lowest number is' , min_number);
-
-        for (let index = 0; index < numbers.length; index++) {
-            if (max_number < numbers[index]) {
-                max_number = numbers[index];   
-        }
-      
-         }console.log('the highest number is' , max_number);
-         sum = 0
-         for (let index = 0; index < numbers.length; index++) {
-            if (numbers[index] < 20) {
-                sum += numbers[index];
-
-                
-            }
-        }console.log('the sum of all the number that are under 20 is' , sum);
+      console.log(avg);
+      let min_number = Number.MAX_VALUE
+      let max_number = 0
+      for (let index = 0; index < numbers.length; index++) {
+          if (min_number > numbers[index]) {
+              min_number = numbers[index];   
       }
       
-    </script>
-  </body>
+    }console.log('the lowest number is' , min_number);
+
+      for (let index = 0; index < numbers.length; index++) {
+          if (max_number < numbers[index]) {
+              max_number = numbers[index];   
+      }
+    
+       }console.log('the highest number is' , max_number);
+       sum = 0
+       for (let index = 0; index < numbers.length; index++) {
+          if (numbers[index] < 20) {
+              sum += numbers[index];
+
+              
+          }
+      }console.log('the sum of all the number that are under 20 is' , sum);
+    }
+    
+  </script>
+</body>
 </html>
